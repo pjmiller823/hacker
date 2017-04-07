@@ -6,5 +6,4 @@ require 'open-uri'
 require 'nokogiri'
 Nokogiri::HTML(open('https://news.ycombinator.com')).css(".storylink").each { |article| Story.create(title: article.content, link: article.values.first, email: 'thisfakemail@fake.com') }
 
-# add on an orderby to the end?
 # still need numbers.

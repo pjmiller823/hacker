@@ -1,7 +1,7 @@
 class StoriesController < ApplicationController
   # GET /stories
   def index
-    @stories = Story.all
+    @stories = Story.all.sort_by { |story| story.created_at }.reverse
   end
 
   # GET /stories/1
