@@ -1,9 +1,15 @@
 class StoriesController < ApplicationController
   # GET /stories
   def index
-    @stories = Story.all.order(created_at: :desc)
+    @page = params[:page].to_i
+    if @page == 0
+      @starting_number = 0
+    else
+      @starting_number = (@page - 1) * 20
+    end
+    @stories = Story.all.order(created_at: :desc).page(@page).per(20)
   end
-  
+
   # GET /stories/1
   def show
     @story = Story.find(params[:id])

@@ -4,6 +4,9 @@
 
 require 'open-uri'
 require 'nokogiri'
-Nokogiri::HTML(open('https://news.ycombinator.com')).css(".storylink").each { |article| Story.create(title: article.content, link: article.values.first, email: 'thisfakemail@fake.com') }
+
+(1..10).each do |page|
+  Nokogiri::HTML(open("https://news.ycombinator.com?p=#{page}")).css(".storylink").each { |article| Story.create(title: article.content, link: article.values.first, email: 'thisfakemail@fake.com') }
+end
 
 # still need numbers.
