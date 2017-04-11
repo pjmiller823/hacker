@@ -1,5 +1,6 @@
 class StoriesController < ApplicationController
   # GET /stories
+  before_action :authorize!, except: [:index]
   def index
     @page = params[:page].to_i
     if @page == 0
