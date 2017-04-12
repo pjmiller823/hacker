@@ -3,4 +3,6 @@ class Story < ApplicationRecord
   validates :link, format: { with: /\A(http|https)/ }
 
   belongs_to :created_by, class_name: "User"
+  has_many :comments
+  validates :body, presence: true
 end
