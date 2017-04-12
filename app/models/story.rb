@@ -4,5 +4,6 @@ class Story < ApplicationRecord
 
   belongs_to :created_by, class_name: "User"
   has_many :comments
-  validates :body, presence: true
+
+  include ImageUploader[:image]
 end
