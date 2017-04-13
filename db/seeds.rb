@@ -10,5 +10,7 @@ user_2 = User.create(name: "Bruno", email: "thisisfake@fake.com", password: "pas
 (1..10).each do |page|
   Nokogiri::HTML(open("https://news.ycombinator.com?p=#{page}")).css(".storylink").each_with_index { |article, index| Story.create(title: article.content, link: article.values.first, created_by: index.odd? ? user_1 : user_2) }
 end
-
+page = Nokogiri::HTML(open("@story.link"))
+image_from_the_page = page.css("img").select.first
+helper_method :image_from_the_page
 # still need numbers.

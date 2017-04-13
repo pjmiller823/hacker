@@ -1,3 +1,6 @@
+require 'nokogiri'
+require 'open-uri'
+
 class StoriesController < ApplicationController
   # GET /stories
   before_action :authorize!, except: [:index]
