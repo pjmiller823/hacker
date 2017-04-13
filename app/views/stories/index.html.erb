@@ -24,9 +24,9 @@
           <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
           <% end %>
         </div>
-        <% if story.image_url %>
+        <% if story.image_url(:thumbnail) %>
         <div class="media-left">
-          <%= image_tag(story.image_url, size: "64x64") %>
+          <%= image_tag(story.image_url(:thumbnail)) %>
         </div>
         <%else %>
         <div class="media-left">

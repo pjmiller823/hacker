@@ -20,6 +20,9 @@
   <dt>Email:</dt>
   <dd><%= @story.created_by.email %></dd>
 </dl>
+<div>
+  <%= image_tag @story.image_url(:medium) %>
+</div>
 
 <h2>Comments</h2>
 <%= render @story.comments %>
