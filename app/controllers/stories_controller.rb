@@ -35,6 +35,11 @@ class StoriesController < ApplicationController
   def create
     @story = Story.new(story_params)
     @story.created_by = current_user
+
+   # THINGS THAT MODIFY @STORY GO HERE
+   grabber = LinkImageGrabber.new(@story)
+   grabber.process
+
     if @story.save
       redirect_to stories_path, notice: 'Story was successfully created.'
     else

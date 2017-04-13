@@ -26,12 +26,12 @@
         </div>
         <% if story.image_url(:thumbnail) %>
         <div class="media-left">
-          <%= image_tag(story.image_url(:thumbnail)) %>
+          <%= image_tag(       story.image_url(:thumbnail), size: "64x64"      ) %>
         </div>
         <%else %>
         <div class="media-left">
           <img class="media-object" src="/images/twothumbsup.jpg" width="64" height="64">
-        </div>  
+        </div>
         <% end %>
         <div class="media-body">
           <h4 class="media-heading"><%= link_to story.title, story.link %></h4>
