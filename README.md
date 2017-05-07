@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hacker is a reimplementation Hacker News that was assigned by The Iron Yard. The purpose was to take the articles from Hacker News and design a less barebones website to list them. We were introduced to Bootstrap and created a simple scaffold.
 
-Things you may want to cover:
+### TECHNICAL INFORMATION:
 
-* Ruby version
+- Rails version 5.0.2
+- Ruby version 2.4.0
+- Bcrypt
+- Shrine
+- Bootstrap
 
-* System dependencies
+### FEATURES:
 
-* Configuration
+- Simple CRUD for articles.
+- Title of article is an actual link to the article.
+- Time of posting is accurately tracked by the app.
+- Articles are pulled from the Hacker News website.
+- Articles are validated with an name and email address, and an URL with either HTTP or HTTPS.
+- Authentication with Bcrypt.
+- Articles are tracked by the created by ID.
+- Edit and delete is limited to the creator.
+- Pictures are grabbed from the original page, uploaded by the user, or provided a stock photo. Multiple images are saved in three sizes.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### DEMO:
