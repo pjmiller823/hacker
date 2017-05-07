@@ -23,3 +23,7 @@ Hacker is a reimplementation Hacker News that was assigned by The Iron Yard. The
 - Pictures are grabbed from the original page, uploaded by the user, or provided a stock photo. Multiple images are saved in three sizes.
 
 ### DEMO:
+
+Main page/index:
+
+<img src="https://raw.githubusercontent.com/pjmiller823/hacker/master/docs/2017-05-07-13-28-localhost-3000.png" width="250">
